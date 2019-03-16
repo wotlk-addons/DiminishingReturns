@@ -1,3 +1,11 @@
+--[[
+Credits: DiminishingReturns original authors, Lawz and Vendethiel
+TODO :
+remove that useless config folder/addon
+version support: apply default db if new version
+default profile: default and not current player
+]]
+
 -- Addon creation and initialization
 
 DiminishingReturns = CreateFrame("Frame")
