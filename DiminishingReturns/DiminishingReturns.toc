@@ -1,20 +1,22 @@
 ## Interface: 30300
+## X-Curse-Packaged-Version: v1.0-beta-12
+## X-Curse-Project-Name: DiminishingReturns
+## X-Curse-Project-ID: diminishingreturns
+## X-Curse-Repository-ID: wow/diminishingreturns/mainline
 
 ## Title: Diminishing Returns
-## Notes: Attach diminishing returns icons to unit frames.
+## Notes: Attach diminishing return icons to unit frames.
 ## Notes-zhCN: 在单位框体附着递减规则图标。
 ## Notes-zhTW: 在單位框體附著遞減規則圖示。
 ## Author: Adirelle
-## Version: v1.1
-## X-Date: 2019-03-16
+## Version: v1.0-beta-12
+## X-Date: 2010-07-06T12:10:41Z
 
 ## SavedVariables: DiminishingReturnsDB
-## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibAdiEvent-1.0, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplate-1.0, tekDebug, AceGUI-3.0-SharedMediaWidgets
+## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibAdiEvent-1.0, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplate-1.0, tekDebug
 
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
-## X-LoadOn-InterfaceOptions: Diminishing Returns
-## X-LoadOn-Slash: /dimret
 
 #@no-lib-strip@
 libs\LibStub\LibStub.lua
@@ -22,10 +24,6 @@ libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
 libs\AceDB-3.0\AceDB-3.0.xml
 libs\DRData-1.0\DRData-1.0.lua
 libs\LibSharedMedia-3.0\lib.xml
-libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
-libs\AceGUI-3.0\AceGUI-3.0.xml
-libs\AceConfig-3.0\AceConfig-3.0.xml
-libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
 #@end-no-lib-strip@
 
 # Not installable by the CC
@@ -36,7 +34,6 @@ Localization.lua
 Tracker.lua
 Display.lua
 FrameSetup.lua
-Config.lua
 
 support\ag_UnitFrames.lua
 support\Blizzard.lua
