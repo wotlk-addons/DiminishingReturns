@@ -2,6 +2,7 @@ TODO
 	- Remove that useless config folder/addon
 	- Version support: apply default db if new version
 	- Default profile: default and not current player
+	- For some reason the addon breaks when I add slash commands: add a /dr to go to the menu (the current /dimret doesn't work)
 	
 v1.1
 Lawz
