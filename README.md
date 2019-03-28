@@ -13,5 +13,5 @@ Shows DR timers for **target, focus, player, party members** and **arena opponen
 
 - [Download link](https://github.com/wotlk-addons/DiminishingReturns/archive/master.zip)
 - Copy both folders (**`DiminishingReturns`** and **`DiminishingReturns_Config`**) to **`Interface\AddOns`** folder
-- Remove former configuration files in **`WTF\Account\SPEEED\SavedVariables`** while the game isn't running
+- Remove former configuration files in **`WTF\Account\ACCOUNTNAME\SavedVariables`** while the game isn't running
 - Enjoy!
