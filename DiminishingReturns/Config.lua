@@ -340,5 +340,6 @@ AceConfigDialog:AddToBlizOptions('DimRet-profiles', dbOptions.name, OPTION_CATEG
 
 -- Slash command
 _G['SLASH_DIMRET1'] = '/dimret'
+_G['SLASH_DIMRET1'] = '/dr'
 SlashCmdList.DIMRET = function() InterfaceOptionsFrame_OpenToCategory(OPTION_CATEGORY) end
 
