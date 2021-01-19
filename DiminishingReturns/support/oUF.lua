@@ -45,16 +45,37 @@ function addon:DeclareOUF(parent, oUF)
 end
 
 -- Scan for declared oUF
+-- V: reworked the code to try and scan after a few OnUpdate, in case of a loading order issue
+--    it's not pretty, but it works, and considering the original code had a `CreateFrame`, I think
+--    that's the way the author was going to code it in a future version.
 for index = 1, GetNumAddOns() do 
 	local global = GetAddOnMetadata(index, 'X-oUF')
 	if global then
 		local parent = GetAddOnInfo(index)
-		addon:RegisterAddonSupport(parent, function()
+    local callbackFrame
+    local i = 0
+    local function ClearFrame()
+      if callbackFrame then
+        callbackFrame:SetScript('OnUpdate', nil)
+      end
+    end
+    local function TryLoad()
 			local oUF = _G[global]
 			if oUF then
 				addon:DeclareOUF(parent, oUF)
+        ClearFrame()
+      else
+        -- retry on every OnUpdate for 100 times
+        if i > 100 then
+          ClearFrame()
+        elseif callbackFrame == nil then
+          callbackFrame = CreateFrame('Frame')
+          callbackFrame:SetScript('OnUpdate', TryLoad)
+        end
+        i = i + 1
 			end
-		end)
+    end
+		addon:RegisterAddonSupport(parent, TryLoad)
 	end
 end
 
